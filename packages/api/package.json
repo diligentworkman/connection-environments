@@ -1,6 +1,6 @@
 {
-  "name": "@connection-environments/api",
-  "version": "0.0.1",
+  "name": "connection-environments",
+  "version": "0.0.0",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -15,12 +15,11 @@
     "prepublishOnly": "pnpm run build",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:watch": "vitest --watch",
     "check-types": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/promethiumjs/promethium.git"
+    "url": "git+https://github.com/diligentworkman/connection-environments.git"
   },
   "license": "MIT",
   "files": [
@@ -33,9 +32,9 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/promethiumjs/promethium/issues"
+    "url": "https://github.com/diligentworkman/connection-environments/issues"
   },
-  "homepage": "https://github.com/promethiumjs/promethium#readme",
+  "homepage": "https://github.com/diligentworkman/connection-environments#readme",
   "keywords": [
     "connection-environments",
     "ui",
@@ -44,8 +43,8 @@
   ],
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
-    "@vitest/ui": "^1.1.0",
-    "vitest": "^1.1.0",
-    "typescript": "^5.3.3"
+    "@vitest/ui": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   }
 }

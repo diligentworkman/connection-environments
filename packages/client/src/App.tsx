@@ -1,8 +1,8 @@
 import { styleMap } from "lit/directives/style-map.js";
 import { adaptState } from "promethium-js";
 
-function App() {
-  const [count, setCount] = adaptState(0);
+export function App() {
+  const count = adaptState(0);
 
   const fontStyles = {
     fontFamily: "sans-serif",
@@ -46,16 +46,16 @@ function App() {
       <div>
         <button
           $attr:style={styleMap({ ...fontStyles, ...buttonStyles })}
-          on:click={() => setCount((count) => count - 1)}
+          on:click={() => count.set(count.value - 1)}
         >
           -
         </button>
         <span $attr:style={styleMap({ ...fontStyles, ...textStyles })}>
-          {count()}
+          {count.value}
         </span>
         <button
           $attr:style={styleMap({ ...fontStyles, ...buttonStyles })}
-          on:click={() => setCount((count) => count + 1)}
+          on:click={() => count.set(count.value)}
         >
           +
         </button>
@@ -63,5 +63,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

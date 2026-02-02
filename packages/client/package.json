@@ -1,0 +1,31 @@
+{
+  "name": "@connection-environments/client",
+  "version": "0.0.0",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diligentworkman/connection-environments.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diligentworkman/connection-environments/issues"
+  },
+  "homepage": "https://github.com/diligentworkman/connection-environments#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vite": "^5.3.0"
+  },
+  "dependencies": {
+    "lit": "^3.1.4",
+    "promethium-js": "^0.18.0"
+  }
+}

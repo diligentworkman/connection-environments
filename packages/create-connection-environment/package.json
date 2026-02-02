@@ -1,0 +1,30 @@
+{
+  "name": "@repo/core",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "check-types": "tsc --noEmit"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "@vitest/ui": "catalog:",
+    "vitest": "catalog:",
+    "typescript": "catalog:"
+  }
+}
