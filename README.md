@@ -1,3 +1,3 @@
-# PromethiumJS
+# Connection Environments
 
-> [Docs](https://promethium.js.org/)
+Repository for all connection environments packages

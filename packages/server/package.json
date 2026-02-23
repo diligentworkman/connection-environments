@@ -1,5 +1,5 @@
 {
-  "name": "@connection-environments/cli",
+  "name": "@connection-environments/server",
   "version": "0.0.0",
   "private": false,
   "publishConfig": {

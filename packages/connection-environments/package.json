@@ -1,5 +1,5 @@
 {
-  "name": "@connection-environments/api",
+  "name": "connection-environments",
   "version": "0.0.1",
   "private": false,
   "publishConfig": {
@@ -31,7 +31,7 @@
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
-  "description": "Connection environments public API for building extensions",
+  "description": "Connection environments package for distributing all other public packages as one",
   "license": "MIT",
   "homepage": "https://github.com/diligentworkman/connection-environments#readme",
   "repository": {

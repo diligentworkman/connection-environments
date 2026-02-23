@@ -1,10 +1,13 @@
 {
-  "name": "@repo/core",
-  "version": "0.0.0",
-  "private": true,
+  "name": "create-connection-environment",
+  "version": "0.0.1",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
@@ -26,5 +29,22 @@
     "@vitest/ui": "catalog:",
     "vitest": "catalog:",
     "typescript": "catalog:"
-  }
+  },
+  "description": "CLI for creating connection environments",
+  "license": "MIT",
+  "homepage": "https://github.com/diligentworkman/connection-environments#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diligentworkman/connection-environments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diligentworkman/connection-environments/issues"
+  },
+  "keywords": [
+    "cli",
+    "connection-environments",
+    "ui",
+    "frontend",
+    "typescript"
+  ]
 }

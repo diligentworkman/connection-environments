@@ -1,31 +1,53 @@
 {
   "name": "@connection-environments/client",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/diligentworkman/connection-environments.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/diligentworkman/connection-environments/issues"
-  },
-  "homepage": "https://github.com/diligentworkman/connection-environments#readme",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "check-types": "tsc --noEmit"
   },
-  "devDependencies": {
-    "typescript": "catalog:",
-    "vite": "^5.3.0"
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "dependencies": {
     "lit": "^3.1.4",
     "promethium-js": "^0.18.0"
-  }
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "@vitest/ui": "catalog:",
+    "vitest": "catalog:",
+    "typescript": "catalog:"
+  },
+  "description": "Client application for connection environments",
+  "license": "MIT",
+  "homepage": "https://github.com/diligentworkman/connection-environments#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diligentworkman/connection-environments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diligentworkman/connection-environments/issues"
+  },
+  "keywords": [
+    "connection-environments",
+    "ui",
+    "frontend",
+    "typescript"
+  ]
 }
