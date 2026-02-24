@@ -43,8 +43,9 @@
   },
   "keywords": [
     "connection-environments",
-    "ui",
-    "frontend",
+    "api",
+    "extensions",
+    "plugins",
     "typescript"
   ]
 }

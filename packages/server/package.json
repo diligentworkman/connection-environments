@@ -1,25 +1,22 @@
 {
   "name": "@connection-environments/server",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/diligentworkman/connection-environments.git"
+  "bin": {
+    "connection-environment": "./dist/index.js"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/diligentworkman/connection-environments/issues"
-  },
-  "homepage": "https://github.com/diligentworkman/connection-environments#readme",
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@hono/node-server": "^1.16.0",
     "hono": "^4.8.5"
@@ -28,5 +25,21 @@
     "@types/node": "^20.11.17",
     "tsx": "^4.7.1",
     "typescript": "catalog:"
-  }
+  },
+  "description": "Server and CLI for connection environments",
+  "license": "MIT",
+  "homepage": "https://github.com/diligentworkman/connection-environments#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diligentworkman/connection-environments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diligentworkman/connection-environments/issues"
+  },
+  "keywords": [
+    "connection-environments",
+    "server",
+    "cli",
+    "typescript"
+  ]
 }

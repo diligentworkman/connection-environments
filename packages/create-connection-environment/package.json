@@ -41,10 +41,8 @@
     "url": "https://github.com/diligentworkman/connection-environments/issues"
   },
   "keywords": [
-    "cli",
     "connection-environments",
-    "ui",
-    "frontend",
+    "cli",
     "typescript"
   ]
 }
