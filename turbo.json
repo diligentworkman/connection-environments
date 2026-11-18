@@ -15,10 +15,16 @@
     "test": {
       "dependsOn": ["^build"]
     },
-    "check-types": {
-      "dependsOn": ["^check-types"]
+    "check": {
+      "dependsOn": ["^build", "^check"]
     },
     "dev": {
+      "dependsOn": ["build"],
+      "persistent": true,
+      "cache": false
+    },
+    "test-playground#dev": {
+      "dependsOn": ["^build"],
       "persistent": true,
       "cache": false
     },

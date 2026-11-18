@@ -1,19 +1,24 @@
 {
   "name": "test-playground",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.0",
   "type": "module",
+  "connection-environments": {
+    "environment": {
+      "extensions": [
+        "demo-extension"
+      ]
+    }
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "start": "connection-environments start",
+    "dev": "node dev.js",
+    "check": "tsc --noEmit"
   },
   "devDependencies": {
-    "typescript": "catalog:",
-    "vite": "^5.3.0"
-  },
-  "dependencies": {
-    "lit": "^3.1.4",
-    "promethium-js": "^0.18.0"
+    "@types/node": "^26.1.1",
+    "connection-environments": "workspace:*",
+    "demo-extension": "workspace:*",
+    "typescript": "^7.0.2"
   }
 }

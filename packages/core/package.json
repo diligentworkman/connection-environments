@@ -1,16 +1,20 @@
 {
-  "name": "@repo/core",
+  "name": "@connection-environments/core",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
+    "prepublishOnly": "pnpm run build",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "check-types": "tsc --noEmit"
+    "check": "tsc --noEmit"
   },
   "files": [
     "dist"
@@ -22,9 +26,24 @@
     }
   },
   "devDependencies": {
-    "@repo/tsconfig": "workspace:*",
+    "typescript": "^7.0.2",
     "@vitest/ui": "catalog:",
-    "vitest": "catalog:",
-    "typescript": "catalog:"
-  }
+    "vitest": "catalog:"
+  },
+  "description": "Connection environments core graph model and host functionality",
+  "license": "MIT",
+  "homepage": "https://github.com/diligentworkman/connection-environments#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diligentworkman/connection-environments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diligentworkman/connection-environments/issues"
+  },
+  "keywords": [
+    "connection-environments",
+    "core",
+    "graph",
+    "typescript"
+  ]
 }

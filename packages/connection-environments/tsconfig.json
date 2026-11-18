@@ -1,9 +1,17 @@
 {
-  "extends": "@repo/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "declarationDir": "./dist",
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noEmitOnError": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "types": ["node"],
+    "rootDir": "./src",
     "outDir": "./dist"
   },
-  "include": ["./src/**/*"],
-  "exclude": []
+  "include": ["src/**/*"]
 }

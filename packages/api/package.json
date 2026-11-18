@@ -14,7 +14,7 @@
     "prepublishOnly": "pnpm run build",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "check-types": "tsc --noEmit"
+    "check": "tsc --noEmit"
   },
   "files": [
     "dist"
@@ -26,9 +26,8 @@
     }
   },
   "devDependencies": {
-    "@repo/tsconfig": "workspace:*",
+    "typescript": "^7.0.2",
     "@vitest/ui": "catalog:",
-    "typescript": "catalog:",
     "vitest": "catalog:"
   },
   "description": "Connection environments public API for building extensions",

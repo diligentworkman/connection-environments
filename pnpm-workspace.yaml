@@ -2,7 +2,10 @@ packages:
   - apps/*
   - packages/*
 
+allowBuilds:
+  esbuild: true
+
 catalog:
-  '@vitest/ui': ^4.0.18
-  typescript: ^5.9.3
-  vitest: ^4.0.18
+  '@vitest/ui': ^5.0.5
+  vitest: ^5.0.5
+  zod: ^4.6.7

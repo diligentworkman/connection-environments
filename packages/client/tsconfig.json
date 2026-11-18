@@ -1,9 +1,7 @@
 {
-  "extends": "@repo/tsconfig/tsconfig.json",
-  "compilerOptions": {
-    "declarationDir": "./dist",
-    "outDir": "./dist"
-  },
-  "include": ["./src/**/*"],
-  "exclude": []
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }

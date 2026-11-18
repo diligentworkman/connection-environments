@@ -1,54 +1,34 @@
 {
   "name": "@connection-environments/client",
-  "version": "0.0.1",
-  "private": false,
   "publishConfig": {
     "access": "public"
   },
+  "version": "0.0.0",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "check-types": "tsc --noEmit"
+  "exports": {
+    "./index.html": "./dist/index.html",
+    "./development/index.html": "./dist-dev/index.html"
   },
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "dependencies": {
-    "lit": "^3.1.4",
-    "promethium-js": "^0.18.0"
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
   },
   "devDependencies": {
-    "@repo/tsconfig": "workspace:*",
-    "@vitest/ui": "catalog:",
-    "vitest": "catalog:",
-    "typescript": "catalog:"
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.19.2",
+    "svelte": "^5.57.2",
+    "svelte-check": "^4.7.7",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4"
   },
-  "description": "Client application for connection environments",
-  "license": "MIT",
-  "homepage": "https://github.com/diligentworkman/connection-environments#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/diligentworkman/connection-environments.git"
-  },
-  "bugs": {
-    "url": "https://github.com/diligentworkman/connection-environments/issues"
-  },
-  "keywords": [
-    "connection-environments",
-    "ui",
-    "client",
-    "frontend",
-    "typescript"
-  ]
+  "dependencies": {
+    "@connection-environments/core": "workspace:*",
+    "pixi.js": "^8.23.0"
+  }
 }

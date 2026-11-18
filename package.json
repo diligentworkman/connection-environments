@@ -1,15 +1,16 @@
 {
-  "name": "connection-environments",
+  "name": "connection-environments-workspace",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --filter=test-playground...",
     "build": "turbo run build",
+    "check": "turbo run check",
     "publish-packages": "turbo run build && changeset version && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.4",
-    "turbo": "^2.3.3"
+    "@changesets/cli": "^3.0.3",
+    "turbo": "^2.11.9"
   },
   "license": "MIT",
   "packageManager": "pnpm@10.28.0"

@@ -1,15 +1,37 @@
-import { serve } from '@hono/node-server'
-import { Hono } from 'hono'
+import { fileURLToPath } from "node:url";
+import { serve } from "@hono/node-server";
+import { createApp } from "./app.js";
+import { waitForClientBuild } from "./wait-for-client-build.js";
 
-const app = new Hono()
+export interface ServerOptions {
+  port?: number;
+  developmentReload?: boolean;
+}
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+export async function startServer(options: ServerOptions = {}) {
+  const clientDirectory = fileURLToPath(
+    new URL(
+      ".",
+      import.meta.resolve(
+        options.developmentReload
+          ? "@connection-environments/client/development/index.html"
+          : "@connection-environments/client/index.html",
+      ),
+    ),
+  );
+  if (options.developmentReload) {
+    await waitForClientBuild(clientDirectory);
+  }
 
-serve({
-  fetch: app.fetch,
-  port: 3000
-}, (info) => {
-  console.log(`Server is running on http://localhost:${info.port}`)
-})
+  const app = createApp(clientDirectory, options.developmentReload ?? false);
+
+  return serve(
+    {
+      fetch: app.fetch,
+      port: options.port ?? 3000,
+    },
+    (info) => {
+      console.log(`Server is running on http://localhost:${info.port}`);
+    },
+  );
+}

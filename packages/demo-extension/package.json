@@ -1,0 +1,23 @@
+{
+  "name": "demo-extension",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": ["dist"],
+  "connection-environments": {
+    "extension": {
+      "manifestVersion": 1,
+      "entry": "./dist/index.html"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "check": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4"
+  }
+}

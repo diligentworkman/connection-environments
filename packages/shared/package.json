@@ -1,0 +1,26 @@
+{
+  "name": "@connection-environments/shared",
+  "version": "0.0.1",
+  "description": "Shared operation and error utilities for Connection Environments",
+  "type": "module",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

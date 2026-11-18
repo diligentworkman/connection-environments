@@ -1,48 +1,30 @@
 {
   "name": "connection-environments",
   "version": "0.0.1",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
+  "description": "Connection Environments CLI",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc",
-    "prepublishOnly": "pnpm run build",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "check-types": "tsc --noEmit"
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "bin": {
+    "connection-environments": "./dist/cli.js"
   },
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@repo/tsconfig": "workspace:*",
-    "@vitest/ui": "catalog:",
-    "typescript": "catalog:",
-    "vitest": "catalog:"
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2"
   },
-  "description": "Connection environments package for distributing all other public packages as one",
-  "license": "MIT",
-  "homepage": "https://github.com/diligentworkman/connection-environments#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/diligentworkman/connection-environments.git"
-  },
-  "bugs": {
-    "url": "https://github.com/diligentworkman/connection-environments/issues"
-  },
-  "keywords": [
-    "connection-environments",
-    "typescript"
-  ]
+  "dependencies": {
+    "@connection-environments/server": "workspace:*",
+    "commander": "^15.0.0"
+  }
 }

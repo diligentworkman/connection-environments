@@ -70,6 +70,4 @@ jspm_packages/
 
 # package dist 
 dist
-
-# test app src
-apps/test-playground/src
+dist-dev
